@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeHeader() {
+            let myHeader = document.getElementById("header");
+            myHeader.innerHTML = "Hello great students!";
+            myHeader.style.color="red";
+
+            //document.getElementById("header").innerHTML = "Hello new header";
+            //document.getElementById("header").style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <div id="output">What is your name?</div>
+    <input type="text" id="inputField" placeholder="Your name here">
+    <button onclick="updateText()">Update Text</button>
+    <script>
+        function updateText(){
+            const yourName = document.getElementById("inputField").value;
+            let composedText = "<h1>Your name is " + yourName + "<h1>";
+            document.getElementById("output").innerHTML= composedText;
+        }
+    </script>
+    <h2 id="header">Hello Header</h2>
+    <button onclick="changeHeader()">Change header</button>
+    <script>
+    </script>
+</body>
+</html>
